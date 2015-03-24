@@ -43,7 +43,7 @@ namespace MDG.Helpers.UnitTests
             DateTime expectedDate = new DateTime(2015, 04, 27);
             DateTime actualDate = DateAndTime.FirstDateOfWeekISO8601(2015, 18);
 
-            Assert.AreEqual(expectedDate, actualDate, "Дата для 18 недели 2015 года не равна 27 апреля 2015 года");
+            Assert.AreEqual(expectedDate, actualDate, "Дата для 18 недели 2015 года не равна 27 апреля 2015 года"); 
         }
     }
 }
