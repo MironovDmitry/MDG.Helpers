@@ -45,5 +45,29 @@ namespace MDG.Helpers.UnitTests
 
             Assert.AreEqual(expectedDate, actualDate, "Дата для 18 недели 2015 года не равна 27 апреля 2015 года"); 
         }
+
+        [Test]
+        public void GetNumberOfWorkingDays_Given20150330And20150321_Returns2()
+        {
+            DateTime startDate = new DateTime(2015, 3, 30);
+            DateTime endDate = new DateTime(2015, 3, 31);
+            DateTime[] holidays = new DateTime[] { };
+
+            int actualWorkingDays = DateAndTime.GetNumberOfWorkingDays(startDate, endDate, holidays);
+
+            Assert.AreEqual(2, actualWorkingDays);
+        }
+
+        [Test]
+        public void GetNumberOfWorkingDays_Given20150325And20150321_Returns5()
+        {
+            DateTime startDate = new DateTime(2015, 3, 25);
+            DateTime endDate = new DateTime(2015, 3, 31);
+            DateTime[] holidays = new DateTime[] { };
+
+            int actualWorkingDays = DateAndTime.GetNumberOfWorkingDays(startDate, endDate, holidays);
+
+            Assert.AreEqual(5, actualWorkingDays);
+        }
     }
 }
