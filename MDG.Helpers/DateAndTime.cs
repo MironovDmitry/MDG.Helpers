@@ -28,7 +28,7 @@ namespace MDG.Helpers
             var weekNum = weekNumber;
             if (firstWeek <= 1)
             {
-                weekNum -= 1;
+                weekNum -= 1; 
             }
 
             var result = firstMonday.AddDays(weekNum * 7 + firstDayOfWeek - 1);
