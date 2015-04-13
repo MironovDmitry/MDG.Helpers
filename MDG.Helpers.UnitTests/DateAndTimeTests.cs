@@ -69,5 +69,30 @@ namespace MDG.Helpers.UnitTests
 
             Assert.AreEqual(5, actualWorkingDays);
         }
+
+        [Test]
+        public void GetMonthNumberFromName_GivenJanuary_Returns1()
+        {
+            Assert.AreEqual(1, DateAndTime.GetMonthNumberFromName("January"));
+        }
+
+        [Test]
+        public void GetMonthNumberFromName_GivenЯнварь_Returns1()
+        {
+            Assert.AreEqual(1, DateAndTime.GetMonthNumberFromName("Январь"));
+        }
+
+        [Test]
+        public void GetMonthNumberFromName_GivenMarch_Returns3()
+        {
+            Assert.AreEqual(3, DateAndTime.GetMonthNumberFromName("March"));
+        }
+
+        [Test]
+        public void GetMonthNumberFromName_GivenАпрель_Returns4()
+        {
+            Assert.AreEqual(4, DateAndTime.GetMonthNumberFromName("Апрель"));
+        }
+    
     }
 }

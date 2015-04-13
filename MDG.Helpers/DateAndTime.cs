@@ -105,5 +105,66 @@ namespace MDG.Helpers
 
             return businessDays;
         }
+
+        public static int GetMonthNumberFromName(string monthName)
+        {
+            int monthNumber = 1;
+
+            switch (monthName.ToLower())
+            { 
+                case "january": 
+                case "январь":
+                    monthNumber = 1;
+                    break;
+                case "ferbruary":
+                case "февраль":
+                    monthNumber = 2;
+                    break;
+                case "march":
+                case "март":
+                    monthNumber = 3;
+                    break;
+                case "april":
+                case "апрель":
+                    monthNumber = 4;
+                    break;
+                case "may":
+                case "май":
+                    monthNumber = 5;
+                    break;
+                case "june":
+                case "июнь":
+                    monthNumber = 6;
+                    break;
+                case "july":
+                case "июль":
+                    monthNumber = 7;
+                    break;
+                case "august":
+                case "август":
+                    monthNumber = 8;
+                    break;
+                case "september":
+                case "сентябрь":
+                    monthNumber = 9;
+                    break;
+                case "october":
+                case "октябрь":
+                    monthNumber = 10;
+                    break;
+                case "november":
+                case "ноябрь":
+                    monthNumber = 11;
+                    break;
+                case "december":
+                case "декабрь":
+                    monthNumber = 12;
+                    break;
+                default:
+                    break;
+            }
+
+            return monthNumber;
+        }
     }
 }
