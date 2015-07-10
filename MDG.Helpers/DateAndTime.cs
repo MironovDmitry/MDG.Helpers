@@ -166,5 +166,10 @@ namespace MDG.Helpers
 
             return monthNumber;
         }
+
+        public static int GetWeekOfYear(DateTime date)
+        {
+            return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(date, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
+        }
     }
 }
